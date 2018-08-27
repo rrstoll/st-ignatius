@@ -1,0 +1,24 @@
+// @file
+// Color variables
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
+
+$color-blue: #1451a7;
+$color-red: #9e2e23;
+$color-green: #93cc50;
+
+$color-black: #070707;
+$color-white: #ffffff;
+$color-gray: #605e5f;
+$color-gray-light: #e5e5e5;
+
+$color-body: #fff;
+$color-gradient-dark: rgba(0, 0, 0, 0.1);
+$color-gradient-light: rgba(255, 255, 255, 0.1);
+$color-link: $color-red;
+$color-link-hover: $color-red;
+$color-link-visited: $color-red;
+$color-selection-background: #dce4ef;
+$color-selection-foreground: #212121;
+$color-text-primary: $color-black;
+$color-text-secondary: $color-gray;
+

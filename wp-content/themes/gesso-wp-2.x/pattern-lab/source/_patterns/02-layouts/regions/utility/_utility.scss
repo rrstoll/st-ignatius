@@ -1,0 +1,10 @@
+// @file
+// Styles for Utility Layout.
+
+.l-utility {
+    @include breakpoint($bp-small) {
+        background: linear-gradient(to bottom, #7db9e8 0%,#1451a7 100%);
+        color: $color-white;
+        height: 46px;
+    }
+}
