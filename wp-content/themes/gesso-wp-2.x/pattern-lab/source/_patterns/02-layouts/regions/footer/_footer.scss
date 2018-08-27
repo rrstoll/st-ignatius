@@ -1,4 +1,9 @@
 // @file
 // Styles for Footer Layout.
 
-.l-footer {}
+.l-footer {
+    background: linear-gradient(to bottom, #1451a7 0%, #7db9e8 100%);
+    color: $color-white;
+    min-height: 235px;
+    padding: 2rem 0;
+}
