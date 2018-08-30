@@ -23,10 +23,11 @@
 
   {% embed '@layouts/regions/header/header.twig' %}
     {% block content %}
-      {% include '@components/site-name/site-name.twig' with
+      {% include '@components/hero-inline-image/hero-inline-image.twig' with
         {
-          url: site.url,
-          site_name: site.title
+          url: "/",
+          site_name: "Church of St. Ignatius Loyola",
+          image: post.image
         }
       %}
     {% endblock  %}

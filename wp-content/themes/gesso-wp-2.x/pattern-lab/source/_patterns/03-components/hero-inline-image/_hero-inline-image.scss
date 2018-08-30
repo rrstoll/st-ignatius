@@ -7,29 +7,14 @@
   position: relative;
   text-align: center;
 
-  &.has-overlay {
-    &:after {
-      background: rgba(0, 0, 0, 0.5);
-      bottom: 0;
-      content: '';
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-      z-index: 1;
-    }
+  @include breakpoint($bp-large) {
+    min-height: 316px;
+  }
 
-    .hero-inline-image__content {
-      z-index: 2;
-    }
+  .hero-inline-image__content {
+    z-index: 2;
   }
 }
-
-.hero-inline-image__title {
-  margin-bottom: 0.25em;
-}
-
-.hero-inline-image__subtitle {}
 
 .hero-inline-image__picture {
   display: block;
@@ -37,9 +22,16 @@
 }
 
 .hero-inline-image__content {
-  background: rgba(0, 0, 0, 0.5);
-  bottom: 5%;
-  padding: 1em;
-  position: absolute;
-  right: 5%;
+  display: none;
+
+  @include breakpoint($bp-hide-mobile-menu) {
+    background: rgba(0, 0, 0, 0.5);
+    display: block;
+    height: 140px;
+    padding: 3rem 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+  }
 }
