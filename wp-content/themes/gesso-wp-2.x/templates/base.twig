@@ -23,7 +23,7 @@
 
   {% embed '@layouts/regions/header/header.twig' %}
     {% block content %}
-      <div class="hero-bg-image" style="background-image:url({{TimberImage(post.get_field('hero_image')).src}});">
+      <div class="hero-bg-image" {% if post.hero_image %}style="background-image:url({{TimberImage(post.get_field('hero_image')).src}});"{% endif %}>
         <div class="hero-bg-image__content">
           <a class="site-name" href="/" title="{{ 'Home' }}" rel="home">
             <h1 class="site-name__text">Church of St. Ignatius Loyola</h1>
