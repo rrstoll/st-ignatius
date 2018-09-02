@@ -4,9 +4,10 @@
 
 <main id="main" class="main" role="main" tabindex="-1">
   {% include 'layouts-preface' %}
-  {% include 'layouts-content' with
+  {% include 'layouts-sidebar' with
     {
-      content: content
+      sidebar_main_content: content,
+      sidebar_aside_content: sidebar
     }
   %}
   {% include 'layouts-postscript' %}
