@@ -1,4 +1,20 @@
 // @file
 // Styles for Site name.
 
-.site-name {}
+.site-name {
+    color: $color-white;
+    text-decoration: none;
+}
+
+.site-name__text {
+    @include image-replace(500px, 62px);
+    @include svg-background(logo);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    margin: 0 auto;
+
+    @include breakpoint($bp-large) {
+        @include image-replace(650px, 81px);
+    }
+}
