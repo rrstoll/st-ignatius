@@ -39,18 +39,24 @@ h2,
 %h2 {
   @extend %hN;
   font-size: em($font-size-h2);
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 h3,
 %h3 {
   @extend %hN;
   font-size: em($font-size-h3);
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 h4,
 %h4 {
   @extend %hN;
   font-size: em($font-size-h4);
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 h5,
