@@ -35,7 +35,7 @@ $l-sidebar-gutter: 1rem;
     }
 
     // For Browsers that support CSS Grid
-    @supports(display:grid) {
+    /* @supports(display:grid) {
       display: grid;
       grid-template-columns: 1fr $l-sidebar-width;
       grid-gap: $l-sidebar-gutter;
@@ -43,7 +43,7 @@ $l-sidebar-gutter: 1rem;
       .l-sidebar__full {
         grid-column: span 2;
       }
-    }
+    } */
   }
 }
 

@@ -1,5 +1,4 @@
 <div class="l-sidebar{{ has_multiple_sidebar ? ' l-sidebar--multi-2' }} {{ modifier_classes }}">
-
   {% if has_header %}
     <div class="l-sidebar__full">
       {% block sidebar_header %}
@@ -8,7 +7,7 @@
     </div>
   {% endif %}
 
-   {% if has_multiple_sidebar %}
+  {% if has_multiple_sidebar %}
     <aside class="l-sidebar__sidebar">
       {% block sidebar_minor %}
         {{ sidebar_minor_content|raw }}
@@ -16,16 +15,17 @@
     </aside>
   {% endif %}
 
-    <div class="l-sidebar__main">
-      {% block sidebar_main %}
-        {{ sidebar_main_content|raw }}
-      {% endblock %}
-    </div>
+  <div class="l-sidebar__main">
+    {% block sidebar_main %}
+      {{ sidebar_main_content|raw }}
+    {% endblock %}
+  </div>
 
+  {% if sidebar_aside_content %}
     <aside class="l-sidebar__sidebar">
       {% block sidebar_aside %}
         {{ sidebar_aside_content|raw }}
       {% endblock %}
     </aside>
-
+  {% endif %}
 </div>
