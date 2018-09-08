@@ -18,6 +18,12 @@
 
   {% embed '@layouts/regions/utility/utility.twig' %}
     {% block content %}
+      {% include '@components/menu/menu.twig' with
+        {
+          items: secondary_menu.items,
+          menu_name: 'utility'
+        }
+      %}
     {% endblock  %}
   {% endembed %}
 
