@@ -1,0 +1,42 @@
+// @file
+// Styles for the main menu.
+
+.menu--utility {
+  @include list-clean;
+  text-align: right;
+
+  .menu__item {
+    display: inline-block;
+    font-size: 13px;
+    height: 46px;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+  .menu__link {
+    align-items: center;
+    color: $color-white;
+    display: flex;
+    height: 100%;
+    margin: 0 11px;
+    padding: 0px;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.1s ease;
+
+    @include breakpoint($bp-large) {
+      margin: 0 15px;
+    }
+
+    &:focus {
+      outline-color: $color-white;
+    }
+
+    &:hover,
+    &.is-active,
+    &.is-active-trail {
+      color: $color-white;
+      text-decoration: underline;
+    }
+  }
+}
