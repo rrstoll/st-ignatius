@@ -2,8 +2,13 @@
 // Styles for the main menu.
 
 .menu--utility {
-  @include list-clean;
-  text-align: right;
+  display: none;
+
+  @include breakpoint($bp-small) {
+    display: block;
+    @include list-clean;
+    text-align: right;
+  }
 
   .menu__item {
     display: inline-block;
