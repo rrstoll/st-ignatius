@@ -1,7 +1,23 @@
 ---
-content:
+footer_first_content:
   join():
     - include():
-        pattern: components-menu--footer
+        pattern: components-site-name
+        with:
+          modifier_classes: "l-footer__site-name"
+          site_name: "Church of St. Ignatius Loyola Parish"
+          url: "/"
+    - include():
+        pattern: components-content-embed
+        with:
+          content: |-
+            <p class="l-footer__adddress">980 Park Avenue (at 84th Street)<br>New York, NY 10028<br>212 288-3588</p>
     - include():
         pattern: components-copyright
+footer_second_content:
+  join():
+    - include():
+        pattern: components-content-embed
+        with:
+          content: |-
+            <a class="l-footer__social-link" href="#">Facebook</a>
