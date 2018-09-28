@@ -1,0 +1,33 @@
+.social-media {
+    @include svg-background(facebook);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: 34px auto;
+    color: $color-white;
+    display: inline-block;
+    font-family: $base-font-family;
+    font-size: em(13px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0;
+    padding: 10px 50px 10px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+        color: $color-white;
+        text-decoration: underline;
+    }
+
+    .l-footer & {
+        background-position: 1em 100%;
+        background-size: 40px auto;
+        font-size: em(24px);
+        font-style: italic;
+        font-weight: 100;
+        padding: 0 5px 50px 0;
+        text-transform: none;
+    }
+}

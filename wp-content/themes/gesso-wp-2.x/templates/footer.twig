@@ -24,11 +24,11 @@
 		%}
 	{% endblock %}
 	{% block footer_second %}
-		{{ function('get_sidebar', 'footer') }}
-		{% include '@components/content-embed/content-embed.twig' with
+		{% include '@components/social-media/social-media.twig' with
 		    {
-				modifier_classes: "",
-				content: '<a class="l-footer__social-link" href="#">Facebook</a>'
+				url: "https://www.facebook.com/churchofstignatiusloyolanyc/",
+				title: "St. Ignatius on Facebook",
+				text: "Join Us on Social Media"
 			}
 		%}
 	{% endblock %}

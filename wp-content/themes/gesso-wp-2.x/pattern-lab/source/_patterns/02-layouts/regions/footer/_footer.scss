@@ -6,4 +6,32 @@
     color: $color-white;
     min-height: 235px;
     padding: 2rem 0;
+
+    .l-footer__wrapper {
+        > * {
+            margin: 0 0 1em;
+            width: 100%;
+        }
+
+        @include breakpoint($bp-small) {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 2.5%;
+
+            > * {
+                margin: 0;
+                width: 40%;
+            }
+        }
+
+        @include breakpoint($bp-medium) {
+            margin: 0 10%;
+        }
+    }
+
+    .l-footer__adddress {
+        font-size: em(14px);
+        font-weight: 300;
+        line-height: 1.5;
+    }
 }

@@ -18,4 +18,12 @@
     @include breakpoint($bp-large) {
         @include image-replace(650px, 81px);
     }
+
+    .l-footer & {
+        @include image-replace(300px, 39px);
+
+        @include breakpoint($bp-small) {
+            @include image-replace(380px, 49px);
+        }
+    }
 }

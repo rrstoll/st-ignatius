@@ -2,9 +2,15 @@
 // Styles for Utility Layout.
 
 .l-utility {
+    display: none;
+
     @include breakpoint($bp-small) {
+        align-items: center;
         background: linear-gradient(to bottom, #7db9e8 0%,#1451a7 100%);
         color: $color-white;
+        display: flex;
         height: 46px;
+        justify-content: space-between;
+        padding: 0 1em;
     }
 }

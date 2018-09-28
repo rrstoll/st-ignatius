@@ -18,6 +18,13 @@
 
   {% embed '@layouts/regions/utility/utility.twig' %}
     {% block content %}
+      {% include '@components/social-media/social-media.twig' with
+        {
+          url: "https://www.facebook.com/churchofstignatiusloyolanyc/",
+          title: "St. Ignatius on Facebook",
+          text: "Join Us on Social Media"
+        }
+      %}
       {% include '@components/menu/menu.twig' with
         {
           items: secondary_menu.items,
