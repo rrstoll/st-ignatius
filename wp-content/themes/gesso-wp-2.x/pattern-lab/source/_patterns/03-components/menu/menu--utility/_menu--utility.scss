@@ -5,9 +5,8 @@
   display: none;
 
   @include breakpoint($bp-small) {
-    display: block;
+    display: inline-block;
     @include list-clean;
-    text-align: right;
   }
 
   .menu__item {
@@ -16,6 +15,12 @@
     height: 46px;
     padding: 0;
     text-transform: uppercase;
+
+    &:last-of-type {
+      .menu__link {
+        margin-right: 0;
+      }
+    }
   }
 
   .menu__link {

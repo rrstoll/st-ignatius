@@ -20,4 +20,4 @@ footer_second_content:
         pattern: components-content-embed
         with:
           content: |-
-            <a class="l-footer__social-link" href="#">Facebook</a>
+            <a class="l-footer__social-link" href="https://www.facebook.com/churchofstignatiusloyolanyc/">Join Us on Social Media</a>
