@@ -14,10 +14,14 @@ footer_first_content:
             <p class="l-footer__adddress">980 Park Avenue (at 84th Street)<br>New York, NY 10028<br>212 288-3588</p>
     - include():
         pattern: components-copyright
+        with:
+          year: "2018"
+          site_name: "Church of St. Ignatius Loyola Parish"
 footer_second_content:
   join():
     - include():
-        pattern: components-content-embed
+        pattern: components-social-media
         with:
-          content: |-
-            <a class="l-footer__social-link" href="https://www.facebook.com/churchofstignatiusloyolanyc/">Join Us on Social Media</a>
+          url: "https://www.facebook.com/churchofstignatiusloyolanyc/"
+          title: "St. Ignatius on Facebook"
+          text: "Join Us on Social Media"

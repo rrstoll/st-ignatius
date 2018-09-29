@@ -23,6 +23,10 @@
 $context = Timber::get_context();
 $post = new Timber\Post();
 $context['post'] = $post;
+// Get all categories assigned to post
+$categories = $post->terms( 'category' );
+// Get only the first category from the array
+$context['category'] = reset( $categories );
 // Define generic templates.
 $templates = array( 
 	'page-' . $post->post_name . '.twig', 

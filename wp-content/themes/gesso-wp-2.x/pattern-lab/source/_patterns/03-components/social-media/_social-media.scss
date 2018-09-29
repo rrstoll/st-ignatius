@@ -22,12 +22,16 @@
     }
 
     .l-footer & {
-        background-position: 1em 100%;
+        background-position: 50% 100%;
         background-size: 40px auto;
         font-size: em(24px);
         font-style: italic;
         font-weight: 100;
         padding: 0 5px 50px 0;
         text-transform: none;
+
+        @include breakpoint($bp-large) {
+            background-position: .75em 100%;
+        }
     }
 }
