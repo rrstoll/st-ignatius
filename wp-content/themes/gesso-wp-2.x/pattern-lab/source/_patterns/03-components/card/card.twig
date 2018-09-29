@@ -2,19 +2,15 @@
   <div class="card__body">
     <div class="card__header">
       <h3 class="card__title">
-        {% if url %}<a href="{{ url }}">{% endif %}
-          {{title}}
-        {% if url %}</a>{% endif %}
+        {{- title -}}
       </h3>
     </div>
     <div class="card__content">
       {{ content|raw }}
     </div>
-    {% if footer %}
-      <div class="card__footer">
-        {{ footer|raw }}
-      </div>
-    {% endif %}
+    <div class="card__footer">
+      <a href="{{ url }}">Learn More ></a>
+    </div>
   </div>
   {% if media %}
     <div class="card__media">

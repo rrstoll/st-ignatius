@@ -1,21 +1,52 @@
 // @file
 // Styles for Cards.
-$card_padding: 1rem;
 
 .card {
   display: flex;
   flex-direction: column;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .card__body {
   display: flex;
   flex-direction: column;
-  padding: $card_padding*1.5 $card_padding;
+  padding: 1rem 0 0;
+}
+
+.card__header {
+  border-bottom: 1px solid $color-blue;
+  margin: 0 0 .75rem;
+}
+
+.card__title {
+  font-family: $base-font-family;
+  font-size: em(22px);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 .75rem;
+  text-transform: none;
 }
 
 .card__content {
-  margin-bottom: $card_padding*.5;
+  font-size: em(16px);
+  margin-bottom: .75rem;
+
+  p:last-of-type {
+    margin: 0;
+  }
+}
+
+.card__footer a {
+  color: $color-red;
+  font-size: em(14px);
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
 .card__media {
@@ -23,10 +54,6 @@ $card_padding: 1rem;
 }
 
 .card__media-image {
-  @include aspect-ratio(16, 9);
+  @include aspect-ratio(16, 7);
   background-size: cover;
-}
-
-.card__footer {
-  margin-top: auto;
 }
