@@ -4,6 +4,7 @@ element: section
 has_constrain: false
 constrain_classes: l-constrain
 has_label: true
+custom_title_classes: centered
 label_element: h2
 label: Section title
 has_content_wrapper: true

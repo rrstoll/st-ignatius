@@ -9,31 +9,24 @@ content:
           content:
             join():
               - include():
-                  pattern: components-hero-bg-image
+                  pattern: components-welcome-panel
                   with:
-                    title: "Where'd You Get The Coconuts?"
-                    has_subtitle: false
-                    has_summary: true
-                    summary: "<p>The swallow may fly south with the sun, and the house martin or the plover may seek warmer climes in winter, yet these are not strangers to our land.</p>"
-                    call_to_action_content:
-                      join():
-                        - include():
-                            pattern: components-button
-                            with:
-                              text: 'Ni! Ni! Ni! Ni!'
-                              url: '#'
+                    title: "Welcome to the Church of St. Ignatius Loyola"
+                    content: |-
+                      <p>The Church of St. Ignatius Loyola, a vibrant Jesuit parish of the Archdiocese of New York, has been welcoming Catholics from the neighborhood and beyond since 1866. Through worship, service, and prayer, our parishioners find grace, strength, and community. <a class="read-more" href="/welcome">Read more ></a></p>
     - include():
         pattern: layouts-section
         with:
-          has_constrain: false
+          has_constrain: true
           has_label: true
-          label: "You Don't Vote For Kings"
+          custom_title_classes: centered
+          label: "Featured News & Events"
           content:
             join():
               - include():
                   pattern: layouts-grid
                   with:
-                    modifier_classes: 'l-grid--2col'
+                    modifier_classes: 'l-grid--3col'
                     content:
                       join():
                         - include():
