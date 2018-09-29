@@ -36,10 +36,20 @@ $grid-gutter: 2em;
     @include css-fixed-grid(1);
   }
 
-  @include breakpoint(760px) {
-   > * {
-     @include set-flex-column(3, $grid-gutter, 275px);
-   }
+  @include breakpoint($bp-small $bp-medium) {
+    > * {
+      @include set-flex-column(2, $grid-gutter, 0);
+    }
+
+    @supports(display: grid) {
+      @include set-css-fixed-columns(2, $grid-gutter, true);
+    }
+  }
+
+  @include breakpoint(921px) {
+    > * {
+      @include set-flex-column(3, $grid-gutter, 0);
+    }
 
     @supports(display: grid) {
       @include set-css-fixed-columns(3, $grid-gutter, true);

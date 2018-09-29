@@ -12,6 +12,7 @@
   padding: 1.5rem;
 
   @include breakpoint($bp-hide-mobile-menu) {
+    margin: 0 0 4rem;
     padding: 1.5rem 6rem;
   }
 }
@@ -45,10 +46,11 @@
   .read-more {
     font-family: 'Lato', sans-serif;
     font-size: em(14px);
-    font-weight: 600;
+    font-weight: 500;
     margin-left: 5px;
     text-decoration: none;
     text-transform: uppercase;
+    white-space: nowrap;
 
     &:hover,
     &:focus {

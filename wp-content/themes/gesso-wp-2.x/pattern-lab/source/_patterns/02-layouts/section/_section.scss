@@ -3,4 +3,19 @@
 
 .l-section {
   margin-bottom: 2em;
+
+
+  .l-section__title {
+    border-bottom: 2px solid $color-blue;
+    font-size: em(48px);
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    padding-bottom: .5rem;
+    text-transform: none;
+
+    &.centered {
+      text-align: center;
+    }
+  }
 }
