@@ -34,7 +34,19 @@ $templates = array(
 	'page.twig' 
 );
 // Set the Homepage template.
-if ( is_front_page() ) array_unshift( $templates, 'front-page.twig' );
+if ( is_front_page()){
+	// get latest three posts
+    $args = array(
+		'numberpost' => -1,
+		'posts_per_page' => 6,
+		'post_type' => 'post',
+		'meta_key' => 'featured_item'
+    );
+	$context['posts'] = Timber::get_posts($args);
+
+	array_unshift( $templates, 'front-page.twig' );
+}
+
 // Render twig template.
 if ( post_password_required( $post->ID ) ) {
 	Timber::render( 'components/password-form.twig', $context );
