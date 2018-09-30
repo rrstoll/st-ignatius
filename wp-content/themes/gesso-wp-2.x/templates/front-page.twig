@@ -10,8 +10,25 @@
           content: post.content
         }
       %}
-      {% include 'templates/components/loop.twig' %}
-      {% include '@components/pager/pager.twig' %}
+
+      <div class="l-section">
+          <div class="l-constrain">
+            <h2 class="l-section__title centered">Featured News &amp; Events</h2>
+            <div class="l-section__content">
+              <div class="l-grid l-grid--3col">
+                {% for post in posts %}
+                  {% include "@components/card/card.twig" with {
+                    url: post.link,
+                    title: post.title,
+                    media: post.thumbnail,
+                    content: post.teaser
+                    }
+                  %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
     {% endblock %}
   {% endembed %}
 {% endblock %}
