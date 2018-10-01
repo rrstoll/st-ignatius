@@ -3,7 +3,7 @@
 
 // Hide navigation region while mobile menu is displayed.
 .l-navigation {
-  display: none;
+  display: block;
 
   @include breakpoint($bp-hide-mobile-menu) {
     display: block;
