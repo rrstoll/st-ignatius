@@ -48,6 +48,12 @@
 
   {% embed '@layouts/regions/navigation/navigation.twig' %}
     {% block content %}
+      {% include '@components/menu/menu.twig' with
+        {
+          items: primary_menu.items,
+          menu_name: 'main'
+        }
+      %}
       {% filter shortcodes %}
         [maxmegamenu location=max_mega_menu_1] 
       {% endfilter %}

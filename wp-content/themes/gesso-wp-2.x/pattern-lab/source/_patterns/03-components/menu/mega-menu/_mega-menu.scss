@@ -1,0 +1,62 @@
+// @file
+// Styles for the mega menu.
+
+.mega-menu-wrap {
+    display: none !important;
+
+    @include breakpoint($bp-small) {
+        display: block !important;
+    }
+}
+
+.mega-menu-link + .mega-sub-menu > .mega-menu-row {
+    float: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 1200px !important;
+}
+
+.mega-menu > .mega-menu-item > .mega-menu-link {
+    align-items: center;
+    color: $color-black;
+    display: flex;
+    height: 100%;
+    line-height: 1.2;
+    margin: 0 11px;
+    padding: 0px;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.1s ease;
+
+    @include breakpoint($bp-large) {
+        margin: 0 15px;
+    }
+
+    &:focus {
+        outline-color: $color-red;
+    }
+
+    &:hover,
+    &.is-active,
+    &.is-active-trail {
+        color: $color-red;
+
+        &::after {
+        transform: scale3d(1, 1, 1);
+        }
+    }
+
+    &::after {
+        bottom: 0 !important;
+        background-color: $color-red;
+        content: '';
+        height: 4px !important;
+        left: -5px !important;
+        position: absolute;
+        right: -5px !important;
+        top: auto !important;
+        transform: scale3d(0, 1, 1);
+        transition: transform 0.1s;
+        width: auto !important;
+    }
+}
