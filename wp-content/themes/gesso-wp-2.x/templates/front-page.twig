@@ -11,24 +11,41 @@
         }
       %}
 
-      <div class="l-section">
-          <div class="l-constrain">
-            <h2 class="l-section__title centered">Featured News &amp; Events</h2>
-            <div class="l-section__content">
-              <div class="l-grid l-grid--3col">
-                {% for post in posts %}
-                  {% include "@components/card/card.twig" with {
-                    url: post.link,
-                    title: post.title,
-                    media: post.thumbnail,
-                    content: post.teaser
-                    }
-                  %}
-                {% endfor %}
-              </div>
+      <div class="l-section l-section--featured-news">
+        <div class="l-constrain">
+          <h2 class="l-section__title centered">Featured News &amp; Events</h2>
+          <div class="l-section__content">
+            <div class="l-grid l-grid--3col">
+              {% for post in posts %}
+                {% include "@components/card/card.twig" with {
+                  url: post.link,
+                  title: post.title,
+                  media: post.thumbnail,
+                  content: post.teaser
+                  }
+                %}
+              {% endfor %}
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="l-section l-section--news">
+        <div class="l-constrain">
+          <div class="l-section__content">
+            <div class="l-grid">
+              {% for post in news %}
+                {% include "@components/teaser/teaser--news/teaser--news.twig" with {
+                  url: post.link,
+                  title: post.title,
+                  content: post.teaser
+                  }
+                %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
     {% endblock %}
   {% endembed %}
 {% endblock %}
