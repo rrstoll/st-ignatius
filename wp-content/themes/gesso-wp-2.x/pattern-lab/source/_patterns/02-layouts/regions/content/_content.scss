@@ -3,4 +3,5 @@
 
 .l-content {
     padding: 0 0 4em;
+    @extend .clearfix;
 }

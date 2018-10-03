@@ -2,7 +2,8 @@
 // Paragraph styles.
 
 p {
-  margin: 0 0 rem($vertical-spacing);
+  line-height: 1.618em;
+  margin: 0 0 1.618em;
 
   @media print {
     & {

@@ -7,7 +7,7 @@ jQuery( document ).ready(function( $ ) {
   // Create mobile menu container, create mobile bar, and clone the main
   // menu in the navigation region.
   var $mobileNav = $('<nav class="mobile-menu" role="navigation"></nav>'),
-      $mobileBar = $('<div class="mobile-menu__bar"><button class="mobile-menu__button js-mobile-menu-button mobile-menu__button--menu"><span class="mobile-menu__icon mobile-menu__icon--menu">Menu</span></button></div>'),
+      $mobileBar = $('<div class="mobile-menu__bar"><button class="mobile-menu__button js-mobile-menu-button mobile-menu__button--menu"><span class="mobile-menu__icon mobile-menu__icon--menu">Menu</span></button><a class="site-name site-name--mobile" href="/" title="Home" rel="home"><title class="site-name__text">Church of St. Ignatius Loyola</title></a></div>'),
       $mobileLinks = $('<div class="mobile-menu__links hidden"></div>'),
       $mainMenu = $('.l-navigation').find('.menu--main').first().clone();
 

@@ -1,0 +1,59 @@
+.teaser--news {
+    padding-left: 24px;
+}
+
+.teaser--news__title {
+    color: $color-black;
+    font-family: $base-font-family;
+    font-size: em(18px);
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 .75rem;
+    position: relative;
+    text-transform: none;
+
+    &:before {
+        background-image: url('/wp-content/themes/gesso-wp-2.x/images/mosaic.png');
+        background-repeat: no-repeat;
+        background-size: 12px auto;
+        content: '';
+        height: 12px;
+        left: -24px;
+        position: absolute;
+        top: 7px;
+        width: 12px;
+    }
+
+    a {
+        color: $color-black;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+  }
+
+  .teaser--news__content {
+    font-size: em(16px);
+    line-height: 1.6;
+
+    p:last-of-type {
+      margin: 0;
+    }
+  }
+
+  .teaser--news__read-more {
+    color: $color-red;
+    font-size: em(14px);
+    font-weight: 700;
+    margin-left: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }

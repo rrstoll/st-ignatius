@@ -2,7 +2,7 @@
 // Styles for Section Layout.
 
 .l-section {
-  margin-bottom: 2em;
+  margin: 4em 0;
 
 
   .l-section__title {
@@ -17,6 +17,18 @@
 
     &.centered {
       text-align: center;
+    }
+  }
+}
+
+.l-section--news {
+  .l-section__content {
+    @include breakpoint($bp-medium) {
+      padding: 0 7.5%;
+    }
+
+    @include breakpoint($bp-large) {
+      padding: 0 10%;
     }
   }
 }
