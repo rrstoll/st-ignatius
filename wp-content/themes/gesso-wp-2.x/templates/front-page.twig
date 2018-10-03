@@ -34,11 +34,11 @@
         <div class="l-constrain">
           <div class="l-section__content">
             <div class="l-grid">
-              {% for post in news %}
+              {% for item in news %}
                 {% include "@components/teaser/teaser--news/teaser--news.twig" with {
-                  url: post.link,
-                  title: post.title,
-                  content: post.teaser
+                  url: item.link,
+                  title: item.title,
+                  content: item.teaser
                   }
                 %}
               {% endfor %}
