@@ -40,9 +40,20 @@ if ( is_front_page()){
 		'numberpost' => -1,
 		'posts_per_page' => 6,
 		'post_type' => 'post',
-		'meta_key' => 'featured_item'
+		'meta_key' => 'featured_item',
+		'meta_value' => '1',
     );
 	$context['posts'] = Timber::get_posts($args);
+
+	// get latest three posts
+    $args2 = array(
+		'numberpost' => -1,
+		'posts_per_page' => 10,
+		'post_type' => 'post',
+		'meta_key' => 'featured_item',
+    	'meta_value' => '',
+    );
+	$context['news'] = Timber::get_posts($args2);
 
 	array_unshift( $templates, 'front-page.twig' );
 }

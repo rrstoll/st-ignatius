@@ -22,13 +22,14 @@
   font-size: em(22px);
   font-style: italic;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.4;
   margin: 0 0 .75rem;
   text-transform: none;
 }
 
 .card__content {
   font-size: em(16px);
+  line-height: 1.6;
   margin-bottom: .75rem;
 
   p:last-of-type {
@@ -55,5 +56,6 @@
 
 .card__media-image {
   @include aspect-ratio(16, 7);
+  background-position: 50% 25%;
   background-size: cover;
 }
