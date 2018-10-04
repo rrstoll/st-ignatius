@@ -48,12 +48,10 @@ $mobile-menu-text-color: #555559 !default;
 }
 
 .mobile-menu__button--menu {
-  border-right: 1px solid $mobile-menu-border-color;
   float: left;
 }
 
 .mobile-menu__button--search {
-  border-left: 1px solid $mobile-menu-border-color;
   float: right;
 }
 
@@ -63,7 +61,7 @@ $mobile-menu-text-color: #555559 !default;
   background-repeat: no-repeat;
   background-size: 22px 22px;
   display: inline-block;
-  margin-top: 1em;
+  margin-top: .75em;
 }
 
 %mobile-menu__icon--close {
