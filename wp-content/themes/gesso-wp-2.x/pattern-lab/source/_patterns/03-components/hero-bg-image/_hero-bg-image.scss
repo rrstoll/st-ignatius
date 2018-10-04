@@ -3,7 +3,7 @@
 
 .hero-bg-image {
   background-image: url('../images/hero-default-min.jpg'); // default hero image
-  background-position: 50% 50%;
+  background-position: 50% 25%;
   background-size: cover;
   color: #fff;
   min-height: 200px;
@@ -12,11 +12,13 @@
 
   @include breakpoint($bp-large) {
     min-height: 316px;
+    background-position: 50% 25%;
   }
 
   .home & {
     @include breakpoint($bp-large) {
       min-height: 460px;
+      background-position: 50% 50%;
     }
   }
 }

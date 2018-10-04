@@ -7,28 +7,34 @@
 }
 
 .site-name__text {
-    @include image-replace(500px, 62px);
     @include svg-background(logo);
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: auto 100%;
     display: inline-block;
+    height: 62px;
     margin: 0 auto;
+    text-indent: -999em;
+    width: 500px;
 
     @include breakpoint($bp-large) {
-        @include image-replace(650px, 81px);
+        height: 81px;
+        width: 650px;
     }
 
     .mobile-menu & {
-        @include image-replace(250px, 31px);
         @include svg-background-inline(logo-blue);
+        height: 31px;
+        width: 250px;
     }
 
     .l-footer & {
-        @include image-replace(300px, 39px);
+        height: 38px;
+        width: 300px;
 
         @include breakpoint($bp-small) {
-            @include image-replace(380px, 49px);
+            height: 49px;
+            width: 380px;
         }
     }
 }
