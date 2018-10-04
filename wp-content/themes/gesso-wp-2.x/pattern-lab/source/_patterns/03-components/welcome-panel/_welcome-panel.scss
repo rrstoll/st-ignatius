@@ -27,6 +27,7 @@
 }
 
 .welcome-panel__content {
+  max-width: 100%;
   text-align: left;
 
   @include breakpoint($bp-hide-mobile-menu) {

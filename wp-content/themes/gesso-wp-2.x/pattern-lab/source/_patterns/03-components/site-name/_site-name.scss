@@ -21,7 +21,7 @@
 
     .mobile-menu & {
         @include image-replace(250px, 31px);
-        @include svg-background(logo-blue);
+        @include svg-background-inline(logo-blue);
     }
 
     .l-footer & {
