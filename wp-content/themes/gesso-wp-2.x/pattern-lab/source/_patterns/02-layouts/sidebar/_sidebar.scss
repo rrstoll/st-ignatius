@@ -1,10 +1,10 @@
 // @file
 // Styles for the Sidebar Layout.
 
-$l-sidebar-bp: 900px;
+$l-sidebar-bp: 920px;
 $l-sidebar-width: 300px;
 $l-sidebar-minor-width: $l-sidebar-width;
-$l-sidebar-gutter: 1rem;
+$l-sidebar-gutter: 2rem;
 
 .l-sidebar {
   @include breakpoint($l-sidebar-bp) {
