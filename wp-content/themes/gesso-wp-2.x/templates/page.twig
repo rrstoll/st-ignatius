@@ -13,18 +13,43 @@
           %}
         {% endblock %}
         {% block footer %}
-          {% include "@components/author/author.twig" with
-            {
-              url: post.author.link,
-              author: post.author.display_name
-            }
-          %}
         {% endblock %}
         {% block main %}
-          {{ post.content }}
+          <div class="l-sidebar{{ has_multiple_sidebar ? ' l-sidebar--multi-2' }} {{ modifier_classes }}">
+            {% if has_header %}
+            {% endif %}
+
+            {% if has_multiple_sidebar %}
+            {% endif %}
+
+            <div class="l-sidebar__main">
+              {% block sidebar_main %}
+                {{ post.content }}
+              {% endblock %}
+            </div>
+
+            {% if (post.has_events or post.contact or post.contact_text) %}
+              <aside class="l-sidebar__sidebar">
+                {% block sidebar_aside %}
+                  {% if post.has_events %}
+                    <h3 class="l-sidebar__subheading">Events</h3>
+                    {% filter shortcodes %}
+                      [events_list limit="5" category="{{- post.category -}}"]<p>#_EVENTLINK will take place at #_LOCATIONLINK on #_EVENTDATES at #_EVENTTIMES</p>[/events_list]
+                    {% endfilter %}
+                  {% endif %}
+                  {% if (post.contact or post.contact_text) %}
+                    <h3 class="l-sidebar__subheading">Contact</h3>
+                    <a class="contact__email mail" href="mailto:{{- post.contact -}}">{{- post.contact -}}</a>
+                    <div class="contact__content">
+                      {{- post.contact_text -}}
+                    </div>
+                  {% endif %}
+                {% endblock %}
+              </aside>
+            {% endif %}
+          </div>
         {% endblock %}
         {% block comments %}
-          
         {% endblock %}
       {% endembed %}
     {% endblock %}
