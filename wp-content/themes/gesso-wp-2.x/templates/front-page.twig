@@ -46,6 +46,33 @@
           </div>
         </div>
       </div>
+
+      {% embed '@layouts/grid/grid.twig' with {
+          modifier_classes: 'l-grid--2col'
+        }
+      %}
+        {% block content %}
+          <section class="l-section l-section--events">
+            <h2 class="l-section__title">Upcoming Events</h2>
+            <div class="l-section__content">
+              {% filter shortcodes %}
+                [events_list limit="8" category="{{- post.category -}}"]<div class="teaser teaser--event"><div class="teaser--event__first">#_EVENTDATES</div><div class="teaser--event__second">#_EVENTLINK<br>#_EVENTTIMES</div></div>[/events_list]
+              {% endfilter %}
+            </div>
+            <a class="more-link" href="/events">Visit Calendar ></a>
+          </section>
+          <section class="l-section l-section--mass-schedule">
+            <h2 class="l-section__title">Mass Schedule</h2>
+            <div class="l-section__content">
+              {% include "@components/mass-schedule/mass-schedule.twig" with {
+                content: post.mass_schedule
+                }
+              %}
+            </div>
+          </section>
+        {% endblock %}
+      {% endembed %}
+
     {% endblock %}
   {% endembed %}
 {% endblock %}

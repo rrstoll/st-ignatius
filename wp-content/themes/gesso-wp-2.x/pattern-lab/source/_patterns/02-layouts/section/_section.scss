@@ -4,6 +4,10 @@
 .l-section {
   margin: 4em 0;
 
+  .l-grid & {
+    margin: 0;
+  }
+
 
   .l-section__title {
     border-bottom: 2px solid $color-blue;
@@ -17,6 +21,13 @@
 
     &.centered {
       text-align: center;
+    }
+
+    .l-grid & {
+      font-size: em(24px);
+      font-style: normal;
+      font-weight: 600;
+      text-transform: uppercase;
     }
   }
 }
