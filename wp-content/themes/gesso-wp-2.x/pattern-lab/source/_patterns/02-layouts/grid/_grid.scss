@@ -18,7 +18,7 @@ $grid-gutter: 2em;
     @include css-fixed-grid(1);
   }
 
-  @include breakpoint(600px) {
+  @include breakpoint(768px) {
     > * {
       @include set-flex-column(2, $grid-gutter, 275px);
     }
