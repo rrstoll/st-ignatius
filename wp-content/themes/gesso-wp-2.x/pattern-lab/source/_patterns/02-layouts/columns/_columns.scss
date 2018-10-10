@@ -1,0 +1,12 @@
+.l-columns--2 {
+    @include breakpoint($bp-small) {
+        column-count: 2;
+        column-gap: 1em;
+
+        > * {
+            overflow: hidden; /* fix for Firefox */
+            break-inside: avoid-column;
+            -webkit-column-break-inside: avoid;
+        }
+    }
+}

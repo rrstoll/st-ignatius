@@ -18,13 +18,23 @@ $grid-gutter: 2em;
     @include css-fixed-grid(1);
   }
 
-  @include breakpoint(768px) {
+  @include breakpoint($bp-small) {
     > * {
       @include set-flex-column(2, $grid-gutter, 275px);
     }
 
     @supports(display: grid) {
       @include set-css-fixed-columns(2, $grid-gutter, true);
+    }
+  }
+
+  .home .l-section--events & {
+    @include breakpoint(max-width $bp-medium) {
+      @include flex-grid(1, $grid-gutter, 0);
+
+      @supports(display:grid) {
+        @include css-fixed-grid(1);
+      }
     }
   }
 }

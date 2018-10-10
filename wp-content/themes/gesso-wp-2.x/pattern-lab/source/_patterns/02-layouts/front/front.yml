@@ -1,0 +1,5 @@
+---
+front_left_content: |-
+  <p style="background:#333;color:#fff;padding:1em; margin:0;">Main Content</p>
+front_right_content: |-
+  <p style="background:#333;color:#fff;padding:1em; margin:0;">Sidebar</p>

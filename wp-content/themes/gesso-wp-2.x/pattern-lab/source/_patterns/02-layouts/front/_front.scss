@@ -1,0 +1,21 @@
+// @file
+// Styles for the front Layout.
+
+$l-front-width: 33%;
+$l-front-gutter: 4rem;
+
+.l-front {
+    @include breakpoint($bp-medium) {
+        display: flex;
+        flex-wrap: wrap;
+
+        .l-front__first {
+            flex-basis: calc(100% - #{$l-front-width} - #{$l-front-gutter});
+            margin-right: $l-front-gutter;
+        }
+
+        .l-front__second {
+            flex-basis: #{$l-front-width}
+        }
+    }
+}
