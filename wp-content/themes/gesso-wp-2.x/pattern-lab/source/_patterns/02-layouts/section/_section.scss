@@ -4,9 +4,13 @@
 .l-section {
   margin: 4em 0;
 
+  .l-front &,
   .l-grid & {
-    margin: 0;
+    @include breakpoint($bp-medium) {
+      margin: 0;
+    }
   }
+
 
 
   .l-section__title {
@@ -28,6 +32,10 @@
       font-style: normal;
       font-weight: 600;
       text-transform: uppercase;
+    }
+
+    .l-front & {
+      margin-top: 0;
     }
   }
 }
