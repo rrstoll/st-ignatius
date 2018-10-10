@@ -47,20 +47,23 @@
         </div>
       </div>
 
-      {% embed '@layouts/grid/grid.twig' with {
+      {% embed '@layouts/front/front.twig' with {
           modifier_classes: 'l-grid--2col'
         }
       %}
-        {% block content %}
+        {% block front_first %}
           <section class="l-section l-section--events">
             <h2 class="l-section__title">Upcoming Events</h2>
-            <div class="l-section__content">
+            <div class="l-section__content l-columns--2">
               {% filter shortcodes %}
-                [events_list limit="8" category="{{- post.category -}}"]<div class="teaser teaser--event"><div class="teaser--event__first">#_EVENTDATES</div><div class="teaser--event__second">#_EVENTLINK<br>#_EVENTTIMES</div></div>[/events_list]
+                [events_list limit="8" category="{{- post.category -}}"]
+                <div class="teaser teaser--event"><div class="teaser--event__first"><div class="calendar-date"><div class="calendar-date__month">#M</div><div class="calendar-date__day">#j</div></div></div><div class="teaser--event__second">#_EVENTLINK<br>#_EVENTTIMES</div></div>[/events_list]
               {% endfilter %}
             </div>
             <a class="more-link" href="/events">Visit Calendar ></a>
           </section>
+        {% endblock %}
+        {% block front_second %}
           <section class="l-section l-section--mass-schedule">
             <h2 class="l-section__title">Mass Schedule</h2>
             <div class="l-section__content">

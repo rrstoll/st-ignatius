@@ -1,0 +1,13 @@
+<div class="l-front">
+    <div class="l-front__first">
+    {% block front_first %}
+        {{ front_first_content|raw }}
+    {% endblock %}
+    </div>
+
+    <aside class="l-front__second">
+    {% block front_second %}
+        {{ front_second_content|raw }}
+    {% endblock %}
+    </aside>
+</div>

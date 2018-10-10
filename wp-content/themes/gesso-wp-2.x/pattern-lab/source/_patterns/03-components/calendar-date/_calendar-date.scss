@@ -1,0 +1,25 @@
+.calendar-date {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 48px;
+}
+
+.calendar-date__month {
+    background-color: $color-black;
+    color: #fff;
+    font-size: em(13px);
+    font-weight: 300;
+    line-height: 1;
+    padding: 4px 0;
+    text-transform: uppercase;
+}
+
+.calendar-date__day {
+    background-color: $color-gray-light;
+    color: $color-black;
+    font-size: em(20px);
+    font-weight: 600;
+    line-height: 1;
+    padding: 8px 0;
+}
