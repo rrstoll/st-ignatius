@@ -65,7 +65,7 @@ table.em-calendar td a {
 
 table.em-calendar td.eventful a,
 table.em-calendar td.eventful-today a {
-    color: $color-black;
+    color: $color-red;
     display: inline-block;
 }
 
@@ -94,6 +94,6 @@ table.em-calendar thead {
 
 table.em-calendar td.eventless-today,
 table.em-calendar td.eventful-today {
-    background-color: $color-red;
+    background-color: $color-gray;
     color: #fff;
 }

@@ -31,7 +31,8 @@ $l-sidebar-gutter: 2rem;
     .l-sidebar__sidebar {
       flex-grow: 1;
       flex-shrink: 0;
-      flex-basis: #{$l-sidebar-width}
+      flex-basis: #{$l-sidebar-width};
+      font-size: em(16px);
     }
 
     // For Browsers that support CSS Grid
@@ -64,4 +65,41 @@ $l-sidebar-gutter: 2rem;
       }
     }
   }
+}
+
+.l-sidebar__subheading {
+  display: inline-block;
+  font-family: $header-font-family;
+  font-size: rem(24px);
+  font-weight: 600;
+  line-height: 1;
+  margin: 0 0 1rem;
+  padding: 0 28px;
+  position: relative;
+  text-transform: uppercase;
+
+  &:before,
+  &:after {
+    background-image: url('../images/mosaic.png');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 12px auto;
+    content: '';
+    height: 16px;
+    position: absolute;
+    top: 4px;
+    width: 16px;
+  }
+
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+}
+
+.teaser + .l-sidebar__subheading {
+  margin-top: 2rem;
 }
