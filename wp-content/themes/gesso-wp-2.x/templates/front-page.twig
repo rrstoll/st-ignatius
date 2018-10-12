@@ -57,7 +57,7 @@
             <div class="l-section__content l-columns--2">
               {% filter shortcodes %}
                 [events_list limit="8" category="{{- post.category -}}"]
-                <div class="teaser teaser--event"><div class="teaser--event__first"><div class="calendar-date"><div class="calendar-date__month">#M</div><div class="calendar-date__day">#j</div></div></div><div class="teaser--event__second">#_EVENTLINK<br>#_EVENTTIMES</div></div>[/events_list]
+                <div class="teaser teaser--event"><div class="teaser--event__first"><div class="calendar-date"><div class="calendar-date__month">#M</div><div class="calendar-date__day">#j</div></div></div><div class="teaser--event__second">#_EVENTLINK<br><span class="teaser--event__text"><strong>#_EVENTTIMES</strong><br>#_EVENTEXCERPT{15,...}</span></div></div>[/events_list]
               {% endfilter %}
             </div>
             <a class="more-link" href="/events">Visit Calendar ></a>
