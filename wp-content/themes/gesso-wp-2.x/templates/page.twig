@@ -34,7 +34,7 @@
                   {% if post.has_events %}
                     <h3 class="l-sidebar__subheading">Upcoming Events</h3>
                     {% filter shortcodes %}
-                      [events_list limit="5" category="{{- post.category -}}"]<div class="teaser teaser--event"><div class="teaser--event__first"><div class="calendar-date"><div class="calendar-date__month">#M</div><div class="calendar-date__day">#j</div></div></div><div class="teaser--event__second">#_EVENTLINK<br>#_EVENTTIMES</div></div>[/events_list]
+                      [events_list limit="5" category="{{- post.category -}}"]<div class="teaser teaser--event"><div class="teaser--event__first"><div class="calendar-date"><div class="calendar-date__month">#M</div><div class="calendar-date__day">#j</div></div></div><div class="teaser--event__second">#_EVENTLINK<br><span class="teaser--event__text"><strong>#_EVENTTIMES</strong><br>#_EVENTEXCERPT{15,...}</span></div></div>[/events_list]
                     {% endfilter %}
                   {% endif %}
                   {% if (post.contact or post.contact_text) %}
