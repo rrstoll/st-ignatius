@@ -5,17 +5,21 @@ $l-front-width: 33%;
 $l-front-gutter: 4rem;
 
 .l-front {
-    @include breakpoint($bp-medium) {
+    .l-front__first {
+        margin: 0 0 2em;
+    }
+
+    @include breakpoint($bp-large) {
         display: flex;
         flex-wrap: wrap;
 
         .l-front__first {
             flex-basis: calc(100% - #{$l-front-width} - #{$l-front-gutter});
-            margin-right: $l-front-gutter;
+            margin: 0 $l-front-gutter 0 0;
         }
 
         .l-front__second {
-            flex-basis: #{$l-front-width}
+            flex-basis: calc(#{$l-front-width} - 1%);
         }
     }
 }
