@@ -11,10 +11,9 @@
 
   .menu__item {
     display: inline-block;
-    font-size: 13px;
+    font-size: 14px;
     height: 46px;
     padding: 0;
-    text-transform: uppercase;
 
     &:last-of-type {
       .menu__link {
@@ -28,14 +27,14 @@
     color: $color-white;
     display: flex;
     height: 100%;
-    margin: 0 11px;
+    margin: 0 5px;
     padding: 0px;
     position: relative;
     text-decoration: none;
     transition: all 0.1s ease;
 
     @include breakpoint($bp-large) {
-      margin: 0 15px;
+      margin: 0 10px;
     }
 
     &:focus {

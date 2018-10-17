@@ -4,6 +4,7 @@
 .l-section {
   margin: 4em 0;
 
+  .l-front &,
   .l-grid & {
     @include breakpoint($bp-medium) {
       margin: 0;
