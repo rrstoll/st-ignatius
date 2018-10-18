@@ -19,10 +19,4 @@ jQuery( document ).ready(function( $ ) {
     TO = setTimeout(resizeStuff, 200);
   }).resize();
 
-  // Contact email anti-span
-  $('a.mail').on('click', function(){
-    var href = $(this).attr('href');
-    $(this).attr('href', href.replace('badmail.', ''));
-  });
-
 });

@@ -244,3 +244,19 @@ add_filter('timber/loader/loader', function($loader){
 	$loader->addPath(__DIR__ . "/pattern-lab/source/_patterns/05-pages", "pages");
 	return $loader;
 });
+
+
+/**
+ * Hide email from Spam Bots using a shortcode.
+ *
+ * @param array  $atts    Shortcode attributes. Not used.
+ * @param string $content The shortcode content. Should be an email address.
+ * @return string The obfuscated email address. 
+ */
+function wpdocs_hide_email_shortcode( $atts , $content = null ) {
+  if ( ! is_email( $content ) ) {
+      return;
+  }
+  return '<a href="mailto:' . esc_url( antispambot( $content ) ) . '">' . esc_html( antispambot( $content ) ) . '</a>';
+}
+add_shortcode( 'email', 'wpdocs_hide_email_shortcode' );

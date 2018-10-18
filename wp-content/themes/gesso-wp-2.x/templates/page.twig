@@ -40,7 +40,9 @@
                   {% if (post.contact or post.contact_text) %}
                     <h3 class="l-sidebar__subheading">Contact</h3>
                     <div class="contact__wrapper">
-                      <a class="contact__email mail" href="mailto:{{- post.contact -}}">{{- post.contact -}}</a>
+                      {% filter shortcodes %}
+                      [email]{{- post.contact -}}[/email]
+                      {% endfilter %}
                       <div class="contact__content">
                         {{- post.contact_text -}}
                       </div>
