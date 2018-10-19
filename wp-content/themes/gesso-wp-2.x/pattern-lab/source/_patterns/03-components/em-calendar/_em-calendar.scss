@@ -5,7 +5,6 @@
         }
 
         /* Hide table headers (but not display: none;, for accessibility) */
-        thead tr,
         tbody tr.days-names {
             position: absolute;
             top: -9999px;
