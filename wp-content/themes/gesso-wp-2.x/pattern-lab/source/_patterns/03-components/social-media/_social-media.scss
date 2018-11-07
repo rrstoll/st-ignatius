@@ -1,12 +1,13 @@
 .social-media {
     @include svg-background(facebook);
+    @include text-shadow();
     background-position: 100% 50%;
     background-repeat: no-repeat;
     background-size: 34px auto;
     color: $color-white;
     display: inline-block;
     font-family: $base-font-family;
-    font-size: em(16px);
+    font-size: em(15px);
     font-style: normal;
     font-weight: 400;
     line-height: 1;
