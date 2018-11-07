@@ -1,0 +1,6 @@
+// @file
+// Text shadow
+
+@mixin text-shadow($color-shadow: rgba(0,0,0,.8)) {
+  text-shadow: 1px 1px 1px $color-shadow;
+}

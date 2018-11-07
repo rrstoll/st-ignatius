@@ -5,7 +5,6 @@
         }
 
         /* Hide table headers (but not display: none;, for accessibility) */
-        thead tr,
         tbody tr.days-names {
             position: absolute;
             top: -9999px;
@@ -85,7 +84,7 @@ table.em-calendar ul {
 }
 
 table.em-calendar thead {
-    color: $color-blue;
+    color: $color-orange;
     font-size: 120%;
     font-weight: 600;
 
